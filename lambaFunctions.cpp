@@ -1,4 +1,9 @@
 #include<iostream>
+#include<vector>
+#include<algorithm>
+
+void lamdaExample();
+
 int main()
 {
     //example 1
@@ -29,5 +34,13 @@ int main()
     updateDays(30);
     std::cout<<expiresInDays<<std::endl;
 
+    lamdaExample();
+
     return 0;
+}
+
+void lamdaExample(){
+    std::cout<<"Landa example\n\n"<<std::endl;
+    std::vector<int> numbers{2,4,3,5,6,7,8,5,3,2,4,123,12,12};
+    std::for_each(numbers.begin(), numbers.end(), [](int x){std::cout<<x<<std::endl;});
 }
